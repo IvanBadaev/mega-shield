@@ -1,0 +1,175 @@
+@use '../../globals/font-sizes' as *;
+@use '../../globals/variables' as *;
+
+.hero {
+    padding-top: 60px;
+    @include sectionPadding();
+    
+    &__title {
+        font-family : 'Prompt', sans-serif;
+        font-weight : 400;
+        text-transform: uppercase;
+        color : $orange;
+        // &--grey {
+        //     color : $white-fade;
+        &--grey {
+            color : $white-fade;
+        }
+    }
+
+    &__top, &__bottom {
+        display: flex;
+    }
+    &__title--top, &__bottom-image-wrapper {
+        width : 75%;
+        position: relative;
+    }
+    &__title--top {
+        padding-bottom : 20px;
+        display: flex;
+        align-items: end;
+        position : relative;
+    }
+    &__bg--top, &__title--bottom-right {
+        width : 25%;
+    }
+    &__bg--bottom {
+        display: block;
+        width : 100%;
+        height : 100%;
+        object-fit: contain;
+    }
+    &__title--bottom-right {
+        display : flex;
+        align-items: end;
+        position : relative;
+        left : 10px;
+    }
+    &__title--bottom-left {
+        position : absolute;
+        right : 10px;
+        bottom : 0;
+    }
+    &__contact-btn {
+        display: none;
+        width : 100%;
+        justify-content: center;
+        align-items: center;
+        
+        margin-top : 20px;
+        padding-block : 19px;
+        border-radius: 10px;
+
+        background-color: black;
+        color : white;
+        font-family : 'Helvetica Neue', sans-serif;
+        font-size : 24px;
+        font-weight : 300;
+    }
+}
+
+
+@include mediaClamps('hero__title', 80px, 62px, 48px, 42px);
+.hero__title {
+    font-size : clamp(64px, 7vw, 90px)
+}
+
+.hero {
+    padding-top : 0px;
+
+    @media (max-width : 1200px) {
+        &__title--top, &__bottom-image-wrapper {
+            width : 65%;
+            position: relative;
+        }
+        &__bg--top, &__title--bottom-right {
+            width : 35%;
+        }
+    }
+    @media (max-width : 1024px) {
+
+        position : relative;
+        box-sizing: border-box;
+
+        &__top {
+            position : relative;
+        }
+        &__title--top {
+            display: block;
+            position : absolute;
+            top : 40px;
+            padding : 0px;
+
+            z-index : 2;
+            width : 100%;
+            text-wrap : wrap;
+            text-align: center;
+            color : rgba(255, 255, 255, 1)
+        }
+        &__bg--top {
+            display: none;
+        }
+        &__bottom {
+            display: flex;
+            flex-direction: column;
+        }
+        &__bottom-image-wrapper {
+            width : 100%;
+            height : clamp(500px, 60vw, 725px);
+        }
+        &__bg--bottom {
+            object-fit : cover;
+            object-position: left top;
+        }
+        &__title--bottom-left {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 0;
+            right : 22px;
+        }
+        &__title--bottom-right {
+            width : 100%;
+            justify-content: center;
+        }
+        &__contact-btn {
+            display : flex;
+        }
+    }
+
+    @media (max-width : 640px) {
+        &__title {
+            font-size : 42px;
+            &--bottom-right, &--bottom-left {
+                font-size : 64px;
+            }
+            &--bottom-right {
+                display: inline;
+                max-width : 240px;
+                margin-right : 24px;
+                margin-left : auto;
+            }
+            &--bottom-left {
+                text-align : end;
+                right : 64px;
+            }
+ 
+        }
+    }
+
+    @media (max-width : 480px) {
+        padding-inline : 0px;
+
+        &__title--top {
+            top : 20px;
+            left : 16px;
+            text-align : start;
+        }
+        &__bottom-image-wrapper {
+            height : clamp(500px, 140vw, 600px);
+        }
+        &__bg--bottom {
+            object-position: bottom;
+        }
+    }
+}

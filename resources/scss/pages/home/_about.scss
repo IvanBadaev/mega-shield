@@ -1,0 +1,61 @@
+@use '../../globals/font-sizes' as *;
+@use '../../globals/variables' as *;
+
+.about {
+    @include sectionPadding();
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text-wrapper {
+        width: 50%;
+        padding-right : 35px;
+        box-sizing: border-box;
+    }
+    &__text {
+        font-family : 'Helvetica Neue';
+        font-weight : 400;
+        font-size: 26px;
+        line-height: 1.4;
+        &--highlight {
+            color : $orange;
+        }
+        &--top {
+            text-transform: uppercase;
+            padding-bottom: 40px;
+        }
+        &--bottom {
+            max-width : 440px;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius : 10px;
+    }
+}
+
+@include mediaClamps('about__text', 24px, 24px, 20px, 18px);
+
+.about {
+    @media (max-width: 1024px) {
+        &__content {
+            display: flex;
+            flex-flow: column-reverse;
+            gap : 60px;
+        }
+        &__text-wrapper {
+            width: 100%;
+            text-align: center;
+        }
+        &__text--top {
+            text-transform: none;
+            padding-bottom: 16px;
+        }
+        &__text--bottom {
+            max-width : 9999px;
+        }
+    }
+}

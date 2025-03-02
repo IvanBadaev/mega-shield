@@ -1,0 +1,187 @@
+@use "../../globals/variables" as *;
+
+.contacts {
+    @include sectionPadding();
+    max-width : 1080px;
+    margin : auto;
+
+    &__subtitle {
+        padding-bottom: 55px;
+        margin: auto;
+
+        font-family: "Prompt", sans-serif;
+        font-size: 40px;
+        line-height: 1.4;
+        font-weight: 300;
+        color: $orange;
+        text-align: center;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__input-row {
+        display: flex;
+        gap: 20px;
+    }
+    &__input-text {
+        padding: 18px 28px;
+        border: 2px solid rgba(96, 96, 96, 1);
+
+        background-color: rgba(245, 245, 245, 1);
+        border-radius: 10px;
+
+        display: block;
+        flex-grow: 1;
+
+        &,
+        &::placeholder {
+            font-family: "Helvetica Neue";
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 1.4;
+            color: black;
+        }
+
+        &::placeholder {
+            color: rgba(96, 96, 96, 1);
+        }
+    }
+
+    &__input-submit {
+        padding: 18px 28px;
+        flex-grow: 1;
+
+        background-color: black;
+        border: 0px;
+        border-radius: 10px;
+
+        color: white;
+        font-family: "Helvetica Neue";
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 1.4;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $darkgrey;
+        }
+    }
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        gap : 10px;
+
+        font-family: "Helvetica Neue";
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    &__input-checkbox {
+        position : relative;
+        box-sizing: border-box;
+        margin : 0px;
+        width : 22px;
+        height : 26px;
+        padding : 4px;
+        &:hover {
+            cursor : pointer;
+        }
+        &::before {
+            content : '';
+            position : absolute;
+            top : 0px;
+            left : 0px;
+            background-color: white;
+            width : 22px;
+            height : 26px;
+            border : 1px solid black;
+            border-radius : 4px;
+        }
+        &:after {
+            transition : opacity 0.2s ease;
+        }
+        &:after {
+            content : '';
+            position : absolute;
+            top : -4px;
+            left : 0px;
+            width : 24px;
+            height : 29px;
+            background-image : url('/images/Home/contacts/orangeTick.svg');
+            background-repeat : no-repeat;
+            opacity : 0;
+        }
+        &:checked::after {
+            opacity : 1;
+        }
+    }
+    &__policy-link {
+        font-weight : 400;
+        text-underline-offset: 4px;
+    }
+
+    &__status {
+        width : 100%;
+
+        border-radius : 20px;
+
+        &--success {
+            border : 1px solid rgb(60, 166, 84);
+            background-color: #8cc298;
+        }
+        &--failure {
+            border : 1px solid #fc0339;
+            background-color: rgb(237, 173, 187);
+        }
+    }
+    &__status-text {
+        padding : 20px;
+
+        font-family : "Helvetica Neue", sans-serif;
+        font-size : 20px;
+        font-weight : 300;
+        line-height : 1.4;
+    }
+    &__pending-icon-wrapper {
+        display : flex;
+        justify-content: center;
+    }
+    &__pending-icon {
+        width : 30px;
+        height : 30px;
+
+        animation : steps(16, end) 2s infinite endlessRotate
+    }
+
+    @media (max-width : 1024px) {
+        &__subtitle {
+            font-size : 36px;
+        }
+        &__checkbox-label {
+            position : relative;
+            left : 8px;
+        }
+    }
+    @media (max-width : 640px) {
+        &__input-row {
+            flex-direction: column;
+        }
+        &__checkbox {
+            align-items: start;
+        }
+        &__input-checkbox {
+            top : 3px;
+        }
+    }
+}
+
+@keyframes endlessRotate {
+    0% {
+        transform : rotate(0deg)
+    }
+    100% {
+        transform : rotate(360deg)
+    }
+}

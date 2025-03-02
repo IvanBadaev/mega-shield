@@ -1,0 +1,190 @@
+.footer {
+    background-color: rgba(25, 25, 25, 1);
+    padding-top: 80px;
+    padding-bottom: 60px;
+    &__top {
+        display: flex;
+        gap : 20px;
+    }
+    &__top-left {
+        display : flex;
+        gap : 20px;
+        justify-content: space-between;
+        flex-grow : 1;
+    }
+    &__logo {
+        max-width : 400px;
+        flex-grow : 1;
+    }
+    &__logo-link {
+        height : 84px;
+        display: block;
+    }
+    &__logo-img {
+        width : 100%;
+        max-width : 315px;
+        padding-right: 20px;
+    }
+    &__column {
+        flex-grow: 1;
+        flex-basis : 0px;
+        &--address {
+            max-width : 385px;
+        }
+        &--contacts {
+            max-width : 520px;
+        }
+    }
+    &__column-wrapper {
+        &--address {
+            max-width : 300px;
+            box-sizing: border-box;
+        }
+        &--contacts {
+            max-width : 340px;
+            box-sizing: border-box;
+        }
+    }
+    &__column-item, &__column-title, &__link {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: clamp(16px, 1vw, 20px);
+        line-height: 1.4;
+        font-weight: 300;
+        color : white;
+    }
+    &__column-item {
+        margin-bottom : 10px;
+    }
+    &__column-title, &__column-items--top {
+        margin-bottom : 20px;
+    }
+    &__middle {
+        padding-block: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__media {
+        display: flex;
+        gap : 44px;
+    }
+    &__media-link, &__to-top-btn {
+        display: block;
+    }
+    &__bottom {
+        padding-top: 27px;
+        padding-bottom: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+        display: flex;
+        justify-content: space-between;
+    }
+    &__policy-link, &__bottom-text {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: clamp(16px, 1vw, 18px);
+        line-height: 1.4;
+        font-weight: 300;
+        color : white;
+    }
+    &__column-subtitle {
+        font-weight : 300;
+    }
+    &__column--mobile {
+        display : none;
+    }
+    &__column-item--address-mobile {
+        display : none;
+    }
+    &__bottom {
+        padding-bottom: 0px;
+    }
+
+    @media (max-width : 1024px) {
+        padding-top : 46px;
+        padding-bottom: 30px;
+
+        &__top {
+            flex-direction: column;
+            gap : 40px;
+        }
+        &__top-left {
+            flex-grow : 0;
+        }
+        &__logo {
+            max-width : 9999px;
+            width : 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__column-item--contacts, &__column-items--top, &__column-title--contacts {
+            display: none;
+            visibility : collapse;
+            margin : 0px;
+            padding : 0px;
+        }
+        &__column-item--schedule-break {
+            display: none;
+        }
+        &__reception-phone {
+            margin-block : 10px;
+        }
+        &__column-subtitle {
+            margin-bottom : 10px;
+            font-weight: 500;
+            text-transform : uppercase
+        }
+        &__column--schedule {
+            max-width : 520px;
+        }
+
+        &__top-right {
+            display: flex;
+            justify-content: space-between;
+            gap : 20px;
+        }
+        &__column--mobile {
+            display : block;
+            max-width: 385px;
+        }
+        &__phone-column-wrapper {
+            max-width: 300px;
+        }
+    }
+
+    @media (max-width : 480px) {
+        &__top-left {
+            flex-direction: column;
+            gap : 30px;
+            & h5, ul, li {
+                text-align : center;
+            }
+        }
+        &__column--address, &__column-wrapper--address, &__column-wrapper--contacts {
+            max-width : 9999px;
+            width : 100%;
+        }
+        &__column-item--address-mobile-hide {
+            display : none;
+        }
+        &__column-item--address-mobile {
+            display : inline;
+        }
+        &__column {
+            max-width: fit-content;
+        }
+        &__to-top-btn {
+            display : none;
+        }
+        &__middle {
+            justify-content: center;
+            gap : 26px;
+            padding-block : 40px;
+        }
+        &__policy-link {
+            max-width : 130px;
+        }
+        &__bottom-text {
+            max-width : 115px;
+        }
+    }
+}

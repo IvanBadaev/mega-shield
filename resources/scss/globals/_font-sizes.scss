@@ -1,0 +1,55 @@
+@use "sass:map";
+@use "sass:math";
+
+@function getOptimalVw($breakpoint, $minValue, $maxValue) {
+    //all arguments are px
+    $vw: calc($breakpoint / 100); // 1vw equivalent in px
+    $optimalVw: calc($maxValue / $vw);
+    //strip px from optimaVw
+    $optimalVw: math.div($optimalVw, ($optimalVw * 0 + 1));
+    @return $optimalVw;
+}
+
+@function getClampMap($breakpoint, $minValue, $maxValue) {
+    $optimalVw : getOptimalVw($breakpoint, $minValue, $maxValue);
+    @return ("breakpoint" : $breakpoint, "minValue" : $minValue, "optimalValue" : $optimalVw, "maxValue" : $maxValue);
+}
+
+@mixin mediaClamps($name, $desktop, $laptop, $tablet, $mobile) {
+    $breakpoints : (
+        1 : 9999,
+        2 : 1024,
+        3 : 768,
+        4 : 480,
+    );
+    $fontValues : (
+        1 : $desktop,
+        2 : $laptop,
+        3 : $tablet,
+        4 : $mobile,
+    );
+    $clampSets : ();
+
+    @each $index, $breakpoint in $breakpoints {
+        $firstElement : $index == 1;
+        $clampRule: if($firstElement,
+            getClampMap($breakpoint, map.get($fontValues, $index), map.get($fontValues, $index)),
+            getClampMap($breakpoint, map.get($fontValues, $index), map.get($fontValues, $index - 1)),
+        );
+
+        $clampSets: map.merge($clampSets, ($index: $clampRule));
+    }
+
+    .#{$name} {
+        @each $index, $clampSet in $clampSets {
+            $breakpoint : map.get($clampSet, "breakpoint");
+            $minValue : map.get($clampSet, "minValue");
+            $optimalValue : map.get($clampSet, "optimalValue");
+            $maxValue : map.get($clampSet, "maxValue");
+
+            @media (max-width : #{$breakpoint}px) {
+                font-size : clamp(#{$minValue}, #{$optimalValue}vw, #{$maxValue})
+            }
+        }
+    }
+}

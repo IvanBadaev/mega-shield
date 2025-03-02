@@ -1,0 +1,249 @@
+@use '../../globals/variables' as *;
+
+.vacancies {
+
+    @include sectionPadding();
+
+    &__announcement {
+        padding : 80px 135px;
+        position : relative;
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left : 0;
+        width : 100%;
+        height : 100%;
+        object-fit : cover;
+
+        z-index: -1;
+    }
+    &__vacancy-title {
+        padding : 5px 26px;
+        margin-bottom : 20px;
+        width : fit-content;
+
+        background-color : rgba(0, 0, 0, 0.6);
+        border-radius : 20px;
+        
+        text-transform: uppercase;
+        font-family : 'Prompt', sans-serif;
+        font-weight : 300;
+        font-size : 40px;
+        line-height : 1.4;
+        color : white;
+    }
+    &__vacancy-wage {
+        
+        width : fit-content;
+        padding : 5px 26px;
+        margin-bottom: 260px;
+        background-color : rgba(0, 0, 0, 0.6);
+        border-radius : 20px;
+
+        font-family : 'Helvetica Neue', sans-serif;
+        font-weight : 300;
+        font-size : 20px;
+        line-height : 1.4;
+        color : white;
+    }
+    &__requirements-title, &__responsibilities-title, &__list-items li {
+        margin-bottom : 20px;
+
+        font-family : 'Helvetica Neue', sans-serif;
+        font-weight : 300;
+        font-size : 18px;
+        line-height : 1.2;
+        color : white;
+    }
+    &__requirements-items {
+        padding-bottom: 20px;
+    }
+    &__list-items li {
+        margin-bottom : 10px;
+        list-style : disc;
+        position: relative;
+        left : 20px;
+    }
+    &__bottom-container {
+        max-width : 1080px;
+        margin : auto;
+    }
+    &__conditions {
+        padding-block : 40px;
+    }
+    &__conditions-title {
+        font-family : 'Helvetica Neue', sans-serif;
+        font-size : 24px;
+        font-weight : 300;
+        letter-spacing: 1px;
+        line-height : 1.4;
+        text-transform : uppercase;
+        padding-bottom : 24px;
+    }
+    &__conditions-items {
+        display: flex;
+        font-family : 'Helvetica Neue', sans-serif;
+        font-size : 18px;
+        line-height : 1.4;
+    }
+    &__conditions-list, &__conditions-list ul {
+        display : inline;
+        column-count : 2;
+        & li {
+            list-style : disc;
+            position: relative;
+            left : 20px;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap : 20px;
+    }
+    &__input-row {
+        display: flex;
+        gap : 20px;
+    }
+    &__input-text {
+        padding : 18px 28px;
+        border : 2px solid rgba(96, 96, 96, 1);
+
+        background-color: rgba(245, 245, 245, 1);
+        border-radius : 10px;
+
+        display: block;
+        flex-grow : 1;
+
+        &, &::placeholder {
+            font-family: 'Helvetica Neue';
+            font-weight : 300;
+            font-size : 20px;
+            line-height : 1.4;
+            color : black;
+        }
+
+        &::placeholder {
+            color : rgba(96, 96, 96, 1)
+        }
+    }
+
+    &__input-submit {
+        padding : 18px 28px;
+        flex-grow : 1;
+
+        background-color: $orange;
+        border : 0px;
+        border-radius : 10px;
+
+        color : white;
+        font-family: 'Helvetica Neue';
+        font-weight : 300;
+        font-size : 20px;
+        line-height : 1.4;
+
+        &:hover {
+            cursor : pointer;
+            background-color : $orange-bleak
+        }
+    }
+
+    &__status {
+        width : 100%;
+
+        border-radius : 20px;
+
+        &--success {
+            border : 1px solid rgb(60, 166, 84);
+            background-color: #8cc298;
+        }
+        &--failure {
+            border : 1px solid #fc0339;
+            background-color: rgb(237, 173, 187);
+        }
+    }
+    &__status-text {
+        padding : 20px;
+
+        font-family : "Helvetica Neue", sans-serif;
+        font-size : 20px;
+        font-weight : 300;
+        line-height : 1.4;
+    }
+    &__collapse-conditions-btn {
+        display : none;
+    }
+
+    @media (max-width : 1024px) {
+        
+        &__collapse-conditions-btn {
+            padding-top: 0px;
+            display : flex;
+            width : 100%;
+            justify-content: end;
+
+            color : $orange;
+            font-family: "Helvetica Neue", sans-serif;
+            font-size : 18px;
+            line-height: 1.4;
+
+            &:hover {
+                cursor : pointer;
+            }
+        }
+        &__announcement {
+            padding-left : 20px;
+            padding-right : 40px;
+        }
+        &__vacancy-title {
+            font-size : 32px;
+        }
+        &__vacancy-wage {
+            margin-bottom : 220px;
+        }
+        &__list-items li {
+            font-size : 16px;
+            max-width : 90%;
+        }
+        &__conditions-items li {
+            margin-block : 5px;
+            max-width : 90%;
+        }
+        &__conditions-list--collapsed {
+            max-height : 160px;
+        }
+        
+    }
+    @media (max-width : 640px) {
+        padding-inline : 0px;
+        &__conditions, &__form {
+            padding-inline : 20px;
+        }
+        &__conditions-list {
+            column-count : 1;
+        }
+        &__bg {
+            object-position : -100px center;
+        }
+        &__vacancy-wage {
+            margin-bottom : 140px;
+        }
+        &__input-row {
+            flex-flow: column;
+        }
+    }
+    @media (max-width:  480px) {
+        &__bg {
+            object-position : -320px center;
+        }
+        &__announcement {
+            padding-inline : 16px;
+        }
+        &__vacancy-title {
+            font-size : 32px;
+        }
+        &__vacancy-wage {
+            margin-bottom : 80px;
+        }
+    }
+}

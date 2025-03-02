@@ -1,0 +1,64 @@
+@use '../../globals/font-sizes' as *;
+@use '../../globals/variables' as *;
+
+.stats {
+    display: flex;
+    gap : 20px;
+    @include sectionPadding();
+
+    &__card {
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-width: 32%;
+    }
+    &__card-img {
+        width : 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__card-bottom {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__card-num {
+        font-family: 'Prompt', sans-serif;
+        font-weight: 300;
+        color : $orange-bleak;
+    }
+    &__card-desc {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.4;
+        text-align: right;
+
+        max-width: 220px;
+    }
+}
+
+@include mediaClamps('stats__card-num', 102px, 60px, 60px, 60px);
+.stats__card-num {
+    font-size : clamp(56px, 5.6vw, 102px)
+}
+.stats__card-desc {
+    font-size : clamp(18px, 1.6vw, 24px)
+}
+
+.stats {
+    @media (max-width : 1024px) {
+        flex-direction: column;
+        align-items: center;
+        &__card {
+            width : 100%;
+            max-width : 520px;
+        }
+        &__card-num {
+            font-size : clamp(80px, 20vw, 140px);
+        }
+        &__card-desc {
+            font-size : clamp(20px, 4vw, 24px);
+        }
+    }
+}
