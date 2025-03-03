@@ -44,6 +44,7 @@ const Home = ({services, news, reviews, staffAnnouncements, statsSettings, vacan
     news : Boolean(news.length),
     reviews : Boolean(reviews.length),
     staffAnnouncements : Boolean(staffAnnouncements.length),
+    vacancies : Boolean(vacancySettings.name)
   }
 
   return (

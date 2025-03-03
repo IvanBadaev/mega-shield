@@ -40,7 +40,7 @@ const Header = ({anchors, isDisplayedAnchors} : HeaderProps) => {
     {
       name : 'Вакансии',
       link : anchors.vacancies,
-      doDisplay : true,
+      doDisplay : isDisplayedAnchors.vacancies,
     },
     {
       name : 'Сотрудникам',
