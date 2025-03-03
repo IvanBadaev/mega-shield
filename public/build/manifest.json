@@ -1,0 +1,16 @@
+{
+  "resources/css/style.css": {
+    "file": "assets/style-DbHszmpe.css",
+    "src": "resources/css/style.css",
+    "isEntry": true
+  },
+  "resources/js/App.jsx": {
+    "file": "assets/App-D3G3Aa1i.js",
+    "name": "App",
+    "src": "resources/js/App.jsx",
+    "isEntry": true,
+    "css": [
+      "assets/App-BwXjGcf2.css"
+    ]
+  }
+}
