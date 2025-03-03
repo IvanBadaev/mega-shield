@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('staff_announcements', function (Blueprint $table) {
             $table->id();
-            $table->string('imgUrl');
-            $table->string('desc');
+            $table->string('imgUrl')->length(256);
+            $table->string('desc')->length(2048);
             $table->timestamps();
         });
     }

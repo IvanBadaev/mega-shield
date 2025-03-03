@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->string('reviewText');
-            $table->string('reviewResponse');
-            $table->string('avatarImgUrl');
+            $table->string('reviewText')->length(2048);
+            $table->string('reviewResponse')->length(2048);
+            $table->string('avatarImgUrl')->length(256);
             $table->timestamps();
         });
     }
