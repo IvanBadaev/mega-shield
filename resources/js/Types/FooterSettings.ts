@@ -7,9 +7,9 @@ type FooterSettings = {
     staffBureauPhone : string,
     schedule : string,
     scheduleBreak : string,
-    vk : string,
-    whatsapp : string,
-    viber : string,
+    vk : string | null,
+    whatsapp : string | null,
+    viber : string | null,
 }
 
 export default FooterSettings

@@ -16,7 +16,7 @@ const Footer = ({ anchors, contacts, footerSettings }: FooterProps) => {
                 <div className="footer__top">
                     <div className="footer__logo">
                         <a href={anchors.header} className="footer__logo-link">
-                            <img src="/images/Home/Common/logo--big.png" alt="Логотип" className="footer__logo-img"/>
+                            <img src="/images/Home/Common/logo--big.svg" alt="Логотип" className="footer__logo-img"/>
                         </a>
                     </div>
                     <div className="footer__top-left">
@@ -122,25 +122,34 @@ const Footer = ({ anchors, contacts, footerSettings }: FooterProps) => {
                 </div>
                 <div className="footer__middle">
                     <div className="footer__media">
-                        <a
+                        {
+                            footerSettings.viber && 
+                            <a
                             href={footerSettings.viber}
                             className="footer__media-link"
-                        >
+                            >
                             <img src="/images/Home/footer/viber.svg" alt="Viber" />
-                        </a>
-                        <a
+                            </a>
+                        }
+                        {
+                            footerSettings.whatsapp && 
+                            <a
                             href={footerSettings.whatsapp}
                             className="footer__media-link"
                         >
                             <img src="/images/Home/footer/whatsapp.svg" alt="Viber" />
                         </a>
-                        <a
+                        }
+                        {
+                            footerSettings.vk && 
+                            <a
                             href={footerSettings.vk}
                             className="footer__media-link"
                         >
                             <img src="/images/Home/footer/vk.svg" alt="Viber" />
 
                         </a>
+                        }
                     </div>
                     <a className="footer__to-top-btn" href={anchors.header}>
                         <img src="/images/Home/footer/arrow-top.svg" alt="Viber" />

@@ -50,13 +50,16 @@ class ManageFooter extends SettingsPage
                     ->required(),
                 TextInput::make('viber')
                     ->label('Ссылка на viber')
-                    ->required(),
+                    ->nullable()
+                    ->dehydrateStateUsing(fn ($state) => $state === '' ? null : $state),
                 TextInput::make('whatsapp')
                     ->label('Ссылка на whatsapp')
-                    ->required(),
+                    ->nullable()
+                    ->dehydrateStateUsing(fn ($state) => $state === '' ? null : $state),
                 TextInput::make('vk')
                     ->label('Ссылка на vk')
-                    ->required(),
-            ])->columns(2);
+                    ->nullable()
+                    ->dehydrateStateUsing(fn ($state) => $state === '' ? null : $state),
+        ])->columns(2);
     }
 }

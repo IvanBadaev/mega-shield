@@ -104,7 +104,7 @@ const Header = ({anchors, isDisplayedAnchors} : HeaderProps) => {
   return (
     <header className="header container" id="header">
       <div className="header__logo-wrapper">
-        <img src="images/Home/Common/Logo.png" alt="logo" className="header__logo" />
+        <img src="images/Home/Common/logo--big.svg" alt="logo" className="header__logo" />
       </div>
       <nav className="header__nav">
         <ul className="header__nav-items">
