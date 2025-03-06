@@ -43,10 +43,10 @@ class ReviewResource extends Resource
             ->required()
             ->maxLength(2048),
             Forms\Components\Textarea::make('reviewResponse')->label('Ответ компании')
-            ->required()
+            ->nullable()
+            ->dehydrateStateUsing(fn ($state) => $state === '' ? null : $state)
             ->maxLength(2048),
             FileUpload::make('avatarImgUrl')->label('Изображение профиля автора отзыва')
-            ->required()
             ->image()
             ->imageEditor()
             ->imageEditorAspectRatios(['1:1']),

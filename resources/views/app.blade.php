@@ -11,4 +11,5 @@
   <body>
     @inertia
   </body>
+  <script src="https://unpkg.com/alpinejs" defer></script>
 </html>
