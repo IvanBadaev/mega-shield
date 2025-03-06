@@ -966,9 +966,7 @@ input[type=checkbox] {
   border-radius: 10px;
 }
 .services__card-title-wrapper {
-  display: flex;
-  max-height: -moz-min-content;
-  max-height: min-content;
+  display: block;
   width: 100%;
   box-sizing: border-box;
   position: absolute;
@@ -977,7 +975,6 @@ input[type=checkbox] {
   padding: 20px;
 }
 .services__card-title {
-  width: 100%;
   padding: 6px 12px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 12px;
