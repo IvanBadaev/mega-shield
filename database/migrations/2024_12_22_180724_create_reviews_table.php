@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('reviewText')->length(2048);
             $table->string('reviewResponse')->length(2048)->nullable();
             $table->string('avatarImgUrl')->length(256);
-            $table->integer('startsCount')->length(256);
+            $table->integer('starsCount')->length(256);
             $table->timestamps();
         });
     }
