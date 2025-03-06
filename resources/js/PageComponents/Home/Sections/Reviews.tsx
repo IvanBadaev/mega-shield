@@ -93,7 +93,9 @@ const Reviews = ({reviews} : ReviewsProps) => {
                                             <p className={`reviews__card-review-content ${(displayReplyIndex === reviewIndex) && 'reviews__card-review-content--full'}`}>
                                                 {item.reviewText}
                                             </p>
-                                            <button
+                                            {
+                                                item.reviewResponse &&
+                                                <button
                                                 className="reviews__card-expand-btn reviews__card-expand-btn--desktop"
                                                 onClick={() => {
                                                     (displayReplyIndex === reviewIndex) ?
@@ -106,6 +108,7 @@ const Reviews = ({reviews} : ReviewsProps) => {
                                                     ? "Скрыть"
                                                     : "Посмотреть ответ от компании"}
                                             </button>
+                                            }
                                             <p
                                                 className={`reviews__card-response ${
                                                     (displayReplyIndex !== reviewIndex) &&
