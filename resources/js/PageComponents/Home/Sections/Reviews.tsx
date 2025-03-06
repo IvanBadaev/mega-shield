@@ -112,23 +112,26 @@ const Reviews = ({reviews} : ReviewsProps) => {
                                                     "reviews__card-response--hidden"
                                                 }`}
                                             >
-                                                {item.reviewResponse}
+                                                {item.reviewResponse && item.reviewResponse}
                                             </p>
                                         </div>
                                     </div>
-                                    <button
-                                                className="reviews__card-expand-btn reviews__card-expand-btn--mobile"
-                                                onClick={() => {
-                                                    (displayReplyIndex === reviewIndex) ?
-                                                    setDisplayReplyIndex(-1) : setDisplayReplyIndex(reviewIndex)
-                                                }}
-                                            >
-                                                {folderSvg}
-                                                {
-                                                (displayReplyIndex === reviewIndex)
-                                                    ? "Скрыть"
-                                                    : "Посмотреть ответ от компании"}
-                                            </button>
+                                    {
+                                        item.reviewResponse && 
+                                        <button
+                                        className="reviews__card-expand-btn reviews__card-expand-btn--mobile"
+                                        onClick={() => {
+                                            (displayReplyIndex === reviewIndex) ?
+                                            setDisplayReplyIndex(-1) : setDisplayReplyIndex(reviewIndex)
+                                        }}
+                                    >
+                                        {folderSvg}
+                                        {
+                                        (displayReplyIndex === reviewIndex)
+                                            ? "Скрыть"
+                                            : "Посмотреть ответ от компании"}
+                                    </button>
+                                    }
                                 </article>
                             </SwiperSlide>
                         ))}
