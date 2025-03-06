@@ -93,22 +93,19 @@ const Reviews = ({reviews} : ReviewsProps) => {
                                             <p className={`reviews__card-review-content ${(displayReplyIndex === reviewIndex) && 'reviews__card-review-content--full'}`}>
                                                 {item.reviewText}
                                             </p>
+                                            <button
+                                            className="reviews__card-expand-btn reviews__card-expand-btn--desktop"
+                                            onClick={() => {
+                                                (displayReplyIndex === reviewIndex) ?
+                                                setDisplayReplyIndex(-1) : setDisplayReplyIndex(reviewIndex)
+                                            }}
+                                        >
+                                            {folderSvg}
                                             {
-                                                item.reviewResponse &&
-                                                <button
-                                                className="reviews__card-expand-btn reviews__card-expand-btn--desktop"
-                                                onClick={() => {
-                                                    (displayReplyIndex === reviewIndex) ?
-                                                    setDisplayReplyIndex(-1) : setDisplayReplyIndex(reviewIndex)
-                                                }}
-                                            >
-                                                {folderSvg}
-                                                {
-                                                (displayReplyIndex === reviewIndex)
-                                                    ? "Скрыть"
-                                                    : "Посмотреть ответ от компании"}
-                                            </button>
-                                            }
+                                            (displayReplyIndex === reviewIndex)
+                                                ? "Скрыть"
+                                                : (item.reviewResponse) ? "Посмотреть ответ от компании" : "Посмотреть отзыв полностью"}
+                                        </button>
                                             <p
                                                 className={`reviews__card-response ${
                                                     (displayReplyIndex !== reviewIndex) &&
@@ -119,22 +116,19 @@ const Reviews = ({reviews} : ReviewsProps) => {
                                             </p>
                                         </div>
                                     </div>
+                                    <button
+                                    className="reviews__card-expand-btn reviews__card-expand-btn--mobile"
+                                    onClick={() => {
+                                        (displayReplyIndex === reviewIndex) ?
+                                        setDisplayReplyIndex(-1) : setDisplayReplyIndex(reviewIndex)
+                                    }}
+                                >
+                                    {folderSvg}
                                     {
-                                        item.reviewResponse && 
-                                        <button
-                                        className="reviews__card-expand-btn reviews__card-expand-btn--mobile"
-                                        onClick={() => {
-                                            (displayReplyIndex === reviewIndex) ?
-                                            setDisplayReplyIndex(-1) : setDisplayReplyIndex(reviewIndex)
-                                        }}
-                                    >
-                                        {folderSvg}
-                                        {
-                                        (displayReplyIndex === reviewIndex)
-                                            ? "Скрыть"
-                                            : "Посмотреть ответ от компании"}
-                                    </button>
-                                    }
+                                    (displayReplyIndex === reviewIndex)
+                                        ? "Скрыть"
+                                        : (item.reviewResponse) ? "Посмотреть ответ от компании" : "Посмотреть отзыв полностью"}
+                                </button>
                                 </article>
                             </SwiperSlide>
                         ))}
