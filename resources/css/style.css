@@ -104,91 +104,91 @@ input[type=checkbox] {
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueBlack.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueBlack.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueBlackItalic.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueBlackItalic.otf") format("opentype");
   font-weight: 900;
   font-style: italic;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueBold.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueBold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueBoldItalic.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueBoldItalic.otf") format("opentype");
   font-weight: 700;
   font-style: italic;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueHeavy.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueHeavy.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueHeavyItalic.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueHeavyItalic.otf") format("opentype");
   font-weight: 800;
   font-style: italic;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueLight.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueLight.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueLightItalic.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueLightItalic.otf") format("opentype");
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueMedium.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueMedium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueMediumItalic.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueMediumItalic.otf") format("opentype");
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueRoman.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueRoman.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueThin.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueThin.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueThinItalic.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueThinItalic.otf") format("opentype");
   font-weight: 200;
   font-style: italic;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueUltraLight.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueUltraLight.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("/fonts/helvetica-neue/HelveticaNeueUltraLightItalic.otf") format("opentype");
+  src: url("http://mega-shield.ru/fonts/helvetica-neue/HelveticaNeueUltraLightItalic.otf") format("opentype");
   font-weight: 100;
   font-style: italic;
 }
@@ -197,61 +197,61 @@ input[type=checkbox] {
   font-family: "Prompt";
   font-style: normal;
   font-weight: 400;
-  src: local("Prompt Regular"), url("/fonts/prompt/Prompt-Regular.woff") format("woff");
+  src: local("Prompt Regular"), url("http://mega-shield.ru/fonts/prompt/Prompt-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Prompt";
   font-style: italic;
   font-weight: 400;
-  src: local("Prompt Italic"), url("/fonts/prompt/Prompt-Italic.woff") format("woff");
+  src: local("Prompt Italic"), url("http://mega-shield.ru/fonts/prompt/Prompt-Italic.woff") format("woff");
 }
 @font-face {
   font-family: "Prompt";
   font-style: normal;
   font-weight: 300;
-  src: local("Prompt Light"), url("/fonts/prompt/Prompt-Light.woff") format("woff");
+  src: local("Prompt Light"), url("http://mega-shield.ru/fonts/prompt/Prompt-Light.woff") format("woff");
 }
 @font-face {
   font-family: "Prompt";
   font-style: italic;
   font-weight: 300;
-  src: local("Prompt Light Italic"), url("/fonts/prompt/Prompt-LightItalic.woff") format("woff");
+  src: local("Prompt Light Italic"), url("http://mega-shield.ru/fonts/prompt/Prompt-LightItalic.woff") format("woff");
 }
 @font-face {
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
-  src: local("Prompt Medium"), url("/fonts/prompt/Prompt-Medium.woff") format("woff");
+  src: local("Prompt Medium"), url("http://mega-shield.ru/fonts/prompt/Prompt-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "Prompt";
   font-style: italic;
   font-weight: 500;
-  src: local("Prompt Medium Italic"), url("/fonts/prompt/Prompt-MediumItalic.woff") format("woff");
+  src: local("Prompt Medium Italic"), url("http://mega-shield.ru/fonts/prompt/Prompt-MediumItalic.woff") format("woff");
 }
 @font-face {
   font-family: "Prompt";
   font-style: normal;
   font-weight: 600;
-  src: local("Prompt SemiBold"), url("/fonts/prompt/Prompt-SemiBold.woff") format("woff");
+  src: local("Prompt SemiBold"), url("http://mega-shield.ru/fonts/prompt/Prompt-SemiBold.woff") format("woff");
 }
 @font-face {
   font-family: "Prompt";
   font-style: italic;
   font-weight: 600;
-  src: local("Prompt SemiBold Italic"), url("/fonts/prompt/Prompt-SemiBoldItalic.woff") format("woff");
+  src: local("Prompt SemiBold Italic"), url("http://mega-shield.ru/fonts/prompt/Prompt-SemiBoldItalic.woff") format("woff");
 }
 @font-face {
   font-family: "Prompt";
   font-style: normal;
   font-weight: 700;
-  src: local("Prompt Bold"), url("/fonts/prompt/Prompt-Bold.woff") format("woff");
+  src: local("Prompt Bold"), url("http://mega-shield.ru/fonts/prompt/Prompt-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Prompt";
   font-style: italic;
   font-weight: 700;
-  src: local("Prompt Bold Italic"), url("/fonts/prompt/Prompt-BoldItalic.woff") format("woff");
+  src: local("Prompt Bold Italic"), url("http://mega-shield.ru/fonts/prompt/Prompt-BoldItalic.woff") format("woff");
 }
 .header {
   padding-block: 25px;
@@ -1760,7 +1760,7 @@ input[type=checkbox] {
   left: 0px;
   width: 24px;
   height: 29px;
-  background-image: url("/images/Home/contacts/orangeTick.svg");
+  background-image: url("http://mega-shield.ru/images/Home/contacts/orangeTick.svg");
   background-repeat: no-repeat;
   opacity: 0;
 }
